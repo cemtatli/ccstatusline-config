@@ -1,0 +1,82 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "git-root-dir",
+        "type": "git-root-dir",
+        "metadata": {
+          "hideNoGit": "true"
+        },
+        "color": "#d0d0d0"
+      },
+      {
+        "id": "git-branch",
+        "type": "git-branch",
+        "character": "",
+        "color": "#d0d0d0"
+      },
+      {
+        "id": "git-changes",
+        "type": "git-changes",
+        "character": "",
+        "color": "#d0d0d0"
+      },
+      {
+        "id": "model-effort",
+        "type": "custom-command",
+        "commandPath": "{{HOME}}/.config/ccstatusline/model-effort.sh",
+        "timeout": 1000,
+        "color": "#d0d0d0"
+      },
+      {
+        "id": "context-length",
+        "type": "context-length",
+        "color": "#d0d0d0"
+      },
+      {
+        "id": "session-block",
+        "type": "custom-command",
+        "color": "#ff9e64",
+        "commandPath": "{{HOME}}/.config/ccstatusline/session-block.sh",
+        "timeout": 1000,
+        "preserveColors": true
+      },
+      {
+        "id": "weekly-usage",
+        "type": "weekly-usage",
+        "color": "#d0d0d0"
+      }
+    ]
+  ],
+  "flexMode": "full-until-compact",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPadding": " ",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [
+      ""
+    ],
+    "endCaps": [
+      ""
+    ],
+    "theme": "gruvbox",
+    "autoAlign": false,
+    "continueThemeAcrossLines": true
+  },
+  "installation": {
+    "method": "pinned",
+    "installedVersion": "2.2.22"
+  }
+}
