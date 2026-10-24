@@ -23,6 +23,14 @@
         "color": "#d0d0d0"
       },
       {
+        "id": "lines-diff",
+        "type": "custom-command",
+        "commandPath": "{{HOME}}/.config/ccstatusline/lines-diff.sh",
+        "timeout": 1000,
+        "color": "#d0d0d0",
+        "preserveColors": true
+      },
+      {
         "id": "model-effort",
         "type": "custom-command",
         "commandPath": "{{HOME}}/.config/ccstatusline/model-effort.sh",
@@ -30,9 +38,12 @@
         "color": "#d0d0d0"
       },
       {
-        "id": "context-length",
-        "type": "context-length",
-        "color": "#d0d0d0"
+        "id": "context-bar",
+        "type": "custom-command",
+        "commandPath": "{{HOME}}/.config/ccstatusline/context-bar.sh",
+        "timeout": 1000,
+        "color": "#d0d0d0",
+        "preserveColors": true
       },
       {
         "id": "session-block",

@@ -3,7 +3,7 @@
 My [ccstatusline](https://github.com/sirmalloc/ccstatusline) setup for Claude Code: one compact line with project, branch, model and effort, context size, 5-hour session usage and weekly usage.
 
 ```text
-my-project  main  (+0,-0)  Sonnet 5.5 (Medium)  Ctx: 120.0k  ✻ Session: 42.0% · 3hr 10m · 18:50 ✻  Weekly: 31.0%
+my-project  main  (+0,-0)  +120 -34  Sonnet 5.5 (Medium)  [###-----] 42%  ✻ Session: 42.0% · 3hr 10m · 18:50 ✻  Weekly: 31.0%
 ```
 
 ## What is in it
@@ -12,11 +12,12 @@ my-project  main  (+0,-0)  Sonnet 5.5 (Medium)  Ctx: 120.0k  ✻ Session: 42.0% 
 | --- | --- |
 | Repo, branch, changes | built-in `git-root-dir`, `git-branch`, `git-changes` (hidden outside git repos) |
 | Model and effort | `model-effort.sh`: prints `Sonnet 5.5 (Medium)` as one block |
-| Context | built-in `context-length` |
+| Lines changed | `lines-diff.sh`: `+120 -34` for the session, hidden when zero |
+| Context | `context-bar.sh`: 8-char bar and percent, e.g. `[###-----] 42%` |
 | Session | `session-block.sh`: usage, time left and local reset time of the 5-hour window |
 | Weekly | built-in `weekly-usage` |
 
-**Colors:** every widget is one neutral gray (`#d0d0d0` in `settings.json`; ccstatusline would otherwise give each widget its own color) so the line stays calm. The session block is the only one that reacts: default below 70%, bold yellow from 70%, bold red from 90% (`YELLOW_AT` / `RED_AT` in `session-block.sh`).
+**Colors:** every widget is one neutral gray (`#d0d0d0` in `settings.json`; ccstatusline would otherwise give each widget its own color) so the line stays calm. The context bar turns yellow above 60% and red above 75% (`context-bar.sh`). The session block reacts too: default below 70%, bold yellow from 70%, bold red from 90% (`YELLOW_AT` / `RED_AT` in `session-block.sh`).
 
 ## Install
 

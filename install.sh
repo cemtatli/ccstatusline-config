@@ -10,12 +10,12 @@ STAMP=$(date +%Y%m%d-%H%M%S)
 command -v jq >/dev/null 2>&1 || { echo "jq gerekli (brew install jq)" >&2; exit 1; }
 
 mkdir -p "$DEST"
-for f in settings.json model-effort.sh session-block.sh; do
+for f in settings.json model-effort.sh session-block.sh context-bar.sh lines-diff.sh; do
   [ -f "$DEST/$f" ] && cp "$DEST/$f" "$DEST/$f.bak.$STAMP"
 done
 
-cp "$HERE/model-effort.sh" "$HERE/session-block.sh" "$DEST/"
-chmod +x "$DEST/model-effort.sh" "$DEST/session-block.sh"
+cp "$HERE/model-effort.sh" "$HERE/session-block.sh" "$HERE/context-bar.sh" "$HERE/lines-diff.sh" "$DEST/"
+chmod +x "$DEST/model-effort.sh" "$DEST/session-block.sh" "$DEST/context-bar.sh" "$DEST/lines-diff.sh"
 # {{HOME}} yer tutucusu: ccstatusline commandPath için mutlak yol ister.
 sed "s|{{HOME}}|$HOME|g" "$HERE/settings.json" > "$DEST/settings.json"
 
