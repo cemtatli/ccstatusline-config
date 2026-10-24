@@ -8,26 +8,26 @@
         "metadata": {
           "hideNoGit": "true"
         },
-        "color": "#d0d0d0"
+        "color": "#e6e6e6"
       },
       {
         "id": "git-branch",
         "type": "git-branch",
         "character": "",
-        "color": "#d0d0d0"
+        "color": "#e6e6e6"
       },
       {
         "id": "git-changes",
         "type": "git-changes",
         "character": "",
-        "color": "#d0d0d0"
+        "color": "#e6e6e6"
       },
       {
         "id": "lines-diff",
         "type": "custom-command",
         "commandPath": "{{HOME}}/.config/ccstatusline/lines-diff.sh",
         "timeout": 1000,
-        "color": "#d0d0d0",
+        "color": "#e6e6e6",
         "preserveColors": true
       },
       {
@@ -35,14 +35,14 @@
         "type": "custom-command",
         "commandPath": "{{HOME}}/.config/ccstatusline/model-effort.sh",
         "timeout": 1000,
-        "color": "#d0d0d0"
+        "color": "#e6e6e6"
       },
       {
         "id": "context-bar",
         "type": "custom-command",
         "commandPath": "{{HOME}}/.config/ccstatusline/context-bar.sh",
         "timeout": 1000,
-        "color": "#d0d0d0",
+        "color": "#e6e6e6",
         "preserveColors": true
       },
       {
@@ -56,7 +56,7 @@
       {
         "id": "weekly-usage",
         "type": "weekly-usage",
-        "color": "#d0d0d0"
+        "color": "#e6e6e6"
       }
     ]
   ],
